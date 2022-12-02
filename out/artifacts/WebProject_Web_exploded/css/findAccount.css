@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(249, 251, 255);
+}
+.verify {
+    width: 560px;
+    height: 480px;
+    background-color: white;
+    margin: 0px auto;
+    margin-top: 200px;
+    padding-top: 50px;
+    box-shadow: -4px -4px 8px 3px gainsboro;
+}
+.reset{
+    width: 560px;
+    height: 360px;
+    background-color: white;
+    margin: 0px auto;
+    margin-top: 260px;
+    padding-top: 50px;
+    display: none;
+    box-shadow: -4px -4px 8px 3px gainsboro;
+}
+label {
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    padding-left: 120px;
+}
+
+.main {
+    padding-top: 20px;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    padding-left: 120px;
+    padding-bottom: 8px;
+    font-size: 14px;
+}
+
+input {
+    height: 36px;
+    line-height: 36px;
+    width: 300px;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+    background-color: rgb(245, 246, 250);
+    border: none;
+    border-style: none;
+    outline: none;
+}
+
+.btnVerify,.btnReset {
+    padding-top: 20px;
+}
+
+.btn {
+    background-color: rgb(90, 182, 254);
+    height: 46px;
+    width: 320px;
+    font-size: 18px;
+    color: white;
+}
+#pwd_Prompt,#rpwd_Prompt{
+    margin-bottom: 10px;
+    font-size: 12px;
+    margin-left: 8px;
+    color: gray;
+}
+.item{
+    margin-bottom: 8px;
+}
