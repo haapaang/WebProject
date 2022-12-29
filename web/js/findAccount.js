@@ -1,10 +1,12 @@
 function check(){
-    var account=document.getElementById("item_Account").value;
+    // alert("1")
+    var uid=document.getElementById("item_Uid").value;
     var phone=document.getElementById("item_Phone").value;
-    var uname=document.getElementById("item_Uname").value;
-    var uname=document.getElementById("item_Uid").value;
-    if(account==""||phone==""||uname==""||phone==""){
+    var email=document.getElementById("item_Email").value;
+    if(uid==""||phone==""||email==""){
         alert("请您完善信息")
+        document.querySelector(".verify").style.display="none";
+        document.querySelector(".reset").style.display="block";
         return false;
     }else{
         return true;
@@ -39,16 +41,7 @@ function checkRpwd(){
         return true;
     }
 }
-function checkReturn(){
-    alert(flag)
-    // setTimeout(() => {
-    //     if(flag){
-    //         document.querySelector(".verify").style.display="none";
-    //         document.querySelector(".reset").style.display="block";
-    //     }
-    // }, 500
-    // );
-}
+
 function checkSumbit(){
     if(checkPwd()&&checkRpwd()){
         return true;

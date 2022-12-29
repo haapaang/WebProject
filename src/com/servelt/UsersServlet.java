@@ -39,16 +39,17 @@ public class UsersServlet extends HttpServlet {
     protected void doLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");//处理输出中文乱码
         PrintWriter out=response.getWriter();
-        String account=request.getParameter("account");
+        String uid=request.getParameter("uid");
         String pwd=request.getParameter("pwd");
         UsersDao usersDao=new UsersDao();
         Users users=new Users();
-        users.setAccount(account);
+        users.setUid(uid);
         users.setPwd(pwd);
         if(usersDao.login(users)){
             HttpSession session=request.getSession();
-            session.setAttribute("account",users.getAccount());
-            response.sendRedirect("#");
+            session.setAttribute("uid",users.getUid());
+            out.print("登陆成功！");
+//            response.sendRedirect("#");
         }else {
             out.println("<script>alert('用户名或密码错误，请重新输入！');window.location.href='login.jsp';</script>");
         }
@@ -56,24 +57,22 @@ public class UsersServlet extends HttpServlet {
     protected void doRegister(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");//处理输出中文乱码
         PrintWriter out=response.getWriter();
-        String account=request.getParameter("account");
+        String uid=request.getParameter("uid");
         String rpwd=request.getParameter("rpwd");
         String phone=request.getParameter("phone");
-        String uid=request.getParameter("uid");
-        String uname=request.getParameter("uname");
+        String email=request.getParameter("email");
         UsersDao usersDao=new UsersDao();
         Users users=new Users();
-        users.setAccount(account);
+        users.setUid(uid);
         users.setPwd(rpwd);
         users.setPhone(phone);
-        users.setUname(uname);
-        users.setUid(uid);
+        users.setEmail(email);
         if(usersDao.registerUser(users)){
             HttpSession session=request.getSession();
-            session.setAttribute("account",account);
+            session.setAttribute("uid",uid);
             response.sendRedirect("login.jsp");
         }else {
-            out.println("<script>alert('用户名或密码错误，请重新输入！');window.location.href='login.jsp';</script>");
+            out.println("<script>alert('此账号已存在！！！');window.location.href='login.jsp';</script>");
         }
 
     }
@@ -81,23 +80,21 @@ public class UsersServlet extends HttpServlet {
     protected void doVerify(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");//处理输出中文乱码
         PrintWriter out=response.getWriter();
-        out.println("1");
-        String account=request.getParameter("account");
-        String phone=request.getParameter("phone");
         String uid=request.getParameter("uid");
-        String uname=request.getParameter("uname");
+        String phone=request.getParameter("phone");
+        String email=request.getParameter("email");
         UsersDao usersDao=new UsersDao();
         Users users=new Users();
-        users.setAccount(account);
+        users.setUid(uid);
         users.setPhone(phone);
-        users.setUname(uname);
+        users.setEmail(email);
         users.setUid(uid);
         if(usersDao.verifyUser(users)){
             HttpSession session=request.getSession();
-            session.setAttribute("account",account);
-            request.setAttribute("flag", "false");
-            System.out.println("1");
-            response.sendRedirect("findAccount.jsp");
+            session.setAttribute("uid",uid);
+            request.setAttribute("flag","1");
+//            response.sendRedirect("findAccount.jsp");
+            request.getRequestDispatcher("findAccount.jsp").forward(request,response);
         }else {
             out.println("<script>alert('用户名或密码错误，请重新输入！');window.location.href='findAccount.jsp';</script>");
         }

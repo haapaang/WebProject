@@ -2,7 +2,16 @@ package com.bean;
 
 public class Admin {
     private String uid;
-    private String pwd;
+    private String admpwd;
+    private String phone;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public String getUid() {
         return uid;
@@ -12,12 +21,12 @@ public class Admin {
         this.uid = uid;
     }
 
-    public String getPwd() {
-        return pwd;
+    public String getAdmpwd() {
+        return admpwd;
     }
 
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
+    public void setAdmpwd(String admpwd) {
+        this.admpwd = admpwd;
     }
 
 }

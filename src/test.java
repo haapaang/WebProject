@@ -5,11 +5,10 @@ public class test {
     public static void main(String[] args) {
         UsersDao usersDao=new UsersDao();
         Users users=new Users();
-        users.setAccount("10010");
+        users.setUid("10010");
         users.setPwd("123456");
-        users.setPhone("17673945145");
-        users.setUname("夏鹏");
-        users.setUid("430523200012080916");
-        usersDao.verifyUser(users);
+//        users.setPhone("17673945145");
+//        users.setEmail("xp1208@qq.com");
+        usersDao.login(users);
     }
 }

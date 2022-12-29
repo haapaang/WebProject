@@ -8,7 +8,7 @@ body {
 }
 .verify {
     width: 560px;
-    height: 480px;
+    height: 400px;
     background-color: white;
     margin: 0px auto;
     margin-top: 200px;
@@ -72,6 +72,8 @@ input {
     width: 320px;
     font-size: 18px;
     color: white;
+    letter-spacing: 0.25em;
+    text-indent: 0.25em;
 }
 #pwd_Prompt,#rpwd_Prompt{
     margin-bottom: 10px;

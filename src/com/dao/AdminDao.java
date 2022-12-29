@@ -18,7 +18,7 @@ public class AdminDao {
             String sql="select * from admin where uid=? and pwd=?";
             prst=con.prepareStatement(sql);
             prst.setString(1,admin.getUid());
-            prst.setString(2,admin.getPwd());
+            prst.setString(2,admin.getAdmpwd());
             rs=prst.executeQuery();
             if(rs.next()){
                 flag=true;

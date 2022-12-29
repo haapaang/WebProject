@@ -1,76 +1,166 @@
-* {
-    padding: 0px;
-    border: 0px;
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
-
-body {
-    background-color: aquamarine;
-    font-size: 30px;
-    letter-spacing: 1pt;
-    background: url(../images/background.jpg);
-    background-size: 100% 100%;
-    background-attachment: fixed;
+body{
+    background-color: rgb(234,236,247);
 }
-
-li {
+.container{
+    padding-top: 10%;
+    width: 100%;
+    height: 700px;
+    margin: auto;
+}
+.x{
+    background-color: azure;
+    height:600px;
+    width: 1080px;
+    margin: auto;
+    box-shadow: 4px 3px 8px 4px gainsboro;
+    border-radius: 50px;
+}
+.x_login{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 15px;
+    height: 90%;
+    width: 45%;
+    float: right;
+}
+.x_register{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 90%;
+    width: 45%;
+    float: left;
+    margin-left: 15px;
+    display: none;
+}
+.x_login>*,.x_register>*{
+    margin: 15px;
+    letter-spacing: 0.1em;
+}
+.x_login>img,.x_register>img{
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+}
+.x_login>h1,.x_register>h1{
+    letter-spacing: 0.2em !important;
+    font-weight: bolder;
+    color: rgb(138,154,178);
+}
+.x_login>h1>span,.x_register>h1>span{
+    color: rgb(213,188,217);
+}
+.heard{
+    color: rgb(138,154,178);
+}
+.heard>span{
+    color: rgb(213,188,217);
+}
+.btnRegister,.btnLogin{
+    background-color: rgb(104, 234, 197);
+    width: 200px;
+    height: 55px;
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 12px;
+    letter-spacing: 0.25em;
+    text-indent: 0.25em;
+}
+.y{
+    background-color: rgba(213,188,217,1);
+    height:700px;
+    width: 500px;
+    top: -50px;
+    position: relative;
+    margin-left: 50px;
+    box-shadow: 4px 3px 8px 4px gainsboro;
+    border-radius: 5px;
+}
+.show{
+    display: none;
+}
+.item1{
     list-style: none;
-    margin: 24px;
+    margin: 50px;
 }
-
-input {
-    height: 52px;
-    line-height: 56px;
-    width: 360px;
-    font-size: 28px;
-    border-radius: 8px;
-    border-style: none;
-    padding-left: 8px;
-    background-color: rgba(2,18,43,0.8);
-    outline: none;
-}
-
-.login {
-    width: 600px;
-    height: 800px;
-    margin: 0px auto;
-    margin-top: 10%;
+.y_login{
+    width: 100%;
+    height: 50%;
+    padding-top: 28%;
     text-align: center;
 }
-
-.reset {
-    font-size: 16px;
+.y_login>*{
+}
+.title{
+    font-size: 40px;
+    letter-spacing: 0.6em;
+    font-weight: 900;
+    text-indent: 0.6em;
+    color:white
+}
+input{
+    height: 38px;
+    width: 300px;
+    font-size: 20px;
+    background-color: rgb(213,188,217);
+    border-bottom: 1px solid gray;
+    padding-left: 4px;
+}
+input:focus{
+    outline: none;
+}
+/* input:focus::-webkit-input-placeholder{
+    initial-value: " ";
+} */
+input::-webkit-input-placeholder{
+    color: ghostwhite;
+}
+a{
     text-decoration: none;
-    margin-left: 360px;
-
+    color: ghostwhite;
 }
-a:link{
-    color: black;
+.sbtLogin{
+    height: 50px;
+    border-radius: 8px;
+    background-color: rgb(246,246,245);
+    border-bottom: none;
+    padding-left: 0;
+    letter-spacing: 0.2em;
+    color: rgb(213,188,217);
+    text-indent: 0.2em;
 }
-a:visited{
+.y_register{
+    padding-top: 8%;
+    text-align: center;
+    font-size: 12px;
     color: gray;
+    display: none;
 }
-.title {
-    font-size: 80px;
-    font-weight: bolder;
-    letter-spacing: 5pt;
+.y_register>*{
+    margin-top: 10px;
 }
-
-.apply,
-.btnlogin {
-    width: 500px;
-    padding-left: 0px;
-    height: 60px;
-    border-radius: 26px;
-    background: rgba(255, 255, 129, 0.75);
+.item2{
+    list-style: none;
+    margin-top: 25px;
+    margin-bottom: 8px;
 }
-
-.item {
+.y_register>form>ul>p{
     margin: 0px;
-    height: 20px;
-    line-height: 20px;
 }
-
-.pwd {
-    padding-bottom: 0px;
-    margin-bottom: 10px;
+.sbtRegister{
+    margin-top: 10px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: rgb(246,246,245);
+    border-bottom: none;
+    padding-left: 0;
+    letter-spacing: 0.2em;
+    color: rgb(213,188,217);
+    text-indent: 0.2em;
 }

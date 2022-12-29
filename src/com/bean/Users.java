@@ -1,8 +1,10 @@
 package com.bean;
 
 public class Users {
-    private String uid;
-    private String uname;
+   private String uid;
+   private String phone;
+   private String email;
+   private String pwd;
 
     public String getUid() {
         return uid;
@@ -10,22 +12,6 @@ public class Users {
 
     public void setUid(String uid) {
         this.uid = uid;
-    }
-
-    public String getUname() {
-        return uname;
-    }
-
-    public void setUname(String uname) {
-        this.uname = uname;
-    }
-
-    public String getAccount() {
-        return account;
-    }
-
-    public void setAccount(String account) {
-        this.account = account;
     }
 
     public String getPhone() {
@@ -36,6 +22,14 @@ public class Users {
         this.phone = phone;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getPwd() {
         return pwd;
     }
@@ -43,8 +37,4 @@ public class Users {
     public void setPwd(String pwd) {
         this.pwd = pwd;
     }
-
-    private String account;
-    private String phone;
-    private String pwd;
 }
